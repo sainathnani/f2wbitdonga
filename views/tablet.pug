@@ -2,4 +2,27 @@ extends layout
 
 block content
   h1= title
+  -
+    var results = [
+      {
+        tablet_name: 'Dolo 650',
+        company_name: 'Dolo',
+        tablet_dosage: 1
+      },
+      {
+        tablet_name: 'Aceclo plus',
+        company_name: 'Glenamrk',
+        tablet_dosage: 1
+      },
+      {
+        tablet_name: 'Pantop',
+        company_name: 'Glaxo',
+        tablet_dosage: 2
+      }
+    ];
+  div.container-fluid
+    div.row
+      each tablet in results
+        div(class="col-sm-2") #{tablet.tablet_name} #{tablet.company_name} #{tablet.tablet_dosage}
+
 
